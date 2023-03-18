@@ -109,32 +109,6 @@ PROCESS_THREAD(remote_dht22_process, ev, data)
       printf ("Ventilate, open the window\n");
     }
           printf (" \n");
-
-  //double dewpoint_Out = calculate_dew_point(temp_Out, humid_Out);
-
-  //temp_log = log((double) humidity/1000.00);
-  //printf("Log %.2lf B:C\n", temp_log);
-      /*
-      // Converting int16_t values into double
-      temp_In = (float) temperature / 10.0f;
-      humid_In = (float) humidity / 10.0f;
-      printf("Temperature Inside %.2f ºC, ", temp_In);
-      printf("Humidity %f RH\n", humid_In);
-
-      //Calculating dew point temperature
-      temp_log = log((double) humidity/1000.00);
-      temp_Out = (double) (temperature/10);
-      printf("Temperature Outside %.2lf ºC, ", temp_Out);
-      gamma = (17.271 * temp_In) / (237.7 + temp_In) + log(humid_In / 100.0);
-      dewpoint = ( 237.7 * gamma) / (17.271 - gamma);
-
-      int_dewpoint = (int16_t) (dewpoint * 100);
-      printf ("Int dew point %d.%d B:C\n", int_dewpoint / 100, abs(int_dewpoint % 100));
-      //printing out results
-      printf("Gamma %.2lf ºC\n", gamma);
-      printf("Dew Point %.2lf ºC\n", dewpoint);
-      printf("Log %.2lf ºC\n", temp_log);
-      */
     } else {
       printf("Failed to read the sensor\n");
     }
